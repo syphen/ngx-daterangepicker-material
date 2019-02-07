@@ -3,6 +3,7 @@
 
 [![Build Status](https://travis-ci.org/fetrarij/ngx-daterangepicker-material.svg?branch=master)](https://travis-ci.org/fetrarij/ngx-daterangepicker-material)
 [![npm version](https://badge.fury.io/js/ngx-daterangepicker-material.svg)](https://badge.fury.io/js/ngx-daterangepicker-material)
+[![last commit](https://img.shields.io/github/last-commit/fetrarij/ngx-daterangepicker-material.svg)](https://github.com/fetrarij/ngx-daterangepicker-material/commits/master)
 
  This plugin is compatible with Angular2, Angular4, Angular5 and Angular6. This plugin uses moment.js.
 
@@ -30,7 +31,11 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { App } from './app';
 
 @NgModule({
-    imports:      [... , FormsModule, NgxDaterangepickerMd],
+    imports: [
+        ... , 
+        FormsModule, 
+        NgxDaterangepickerMd.forRoot()
+    ],
     declarations: [App],
     bootstrap:    [App]
 })
@@ -118,6 +123,8 @@ You can use the component directly in your templates, which will set its `inline
     firstDay: 1 // first day is monday
 }
 ```
+[Check here](#global-locale) for setting the global locale
+
 ### startKey and endKey
 
 Theses 2 options are for the key you want for the value, default are `startDate` and `endDate`, it means the value we have from ngModel are: `{startDate: Date, endDate: Date}` by default;
@@ -197,6 +204,26 @@ You can use theses options:
 
  >Fires when the date model is updated, like applying (if you have activated the apply button), or when selecting a range or date without the apply button, and sends an object containing start and end dates, eg: `{startDate: Moment, endDate: Moment}`
 
+### Global locale
+
+For setting the global locale, pass this object to NgxDaterangepickerMd.forRoot().
+
+eg:
+
+```
+@NgModule({
+    imports: [
+        ... , 
+        FormsModule, 
+        NgxDaterangepickerMd.forRoot({
+            separator: ' - ', 
+            applyLabel: 'Okay',
+        })
+    ],
+    declarations: [App],
+    bootstrap:    [App]
+})
+```
 ## Donation
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=THF6M338KQ626)

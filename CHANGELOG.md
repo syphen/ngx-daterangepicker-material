@@ -1,3 +1,48 @@
+#### 2.0.0 (2019-02-04)
+
+##### Chores
+
+* **build:**  fix build ([0d930d5c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0d930d5caf5b884e135a720262e9120ffe807c8f))
+
+* **test:**  fix test with new imports ([e151ecb8](https://github.com/fetrarij/ngx-daterangepicker-material/commit/e151ecb8d284b9fc6e9e9e8c681e4c1457d46463))
+
+##### New Features
+
+* **daterangepicker:**  add global locale config [#69](https://github.com/fetrarij/ngx-daterangepicker-material/pull/69) ([0c303f7c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0c303f7cb3028ea31642bb4cfc7d9e315a6dcb4e))
+
+***Breaking change:***
+ Instead of using `NgxDaterangepickerMd` you should now use `NgxDaterangepickerMd.forRoot()` in imports.
+
+##### Bug Fixes
+
+* **locale:**  fix setting locale for individual and inline mode Fix [#75](https://github.com/fetrarij/ngx-daterangepicker-material/pull/75) ([f73c7515](https://github.com/fetrarij/ngx-daterangepicker-material/commit/f73c75156490e689d061b2dc2369b468ce3712dc))
+* **typo:**  typo in readme ([9b70f872](https://github.com/fetrarij/ngx-daterangepicker-material/commit/9b70f872db4f41d917813446d2b7690077272965))
+
+##### Other Changes
+
+* **global-locale:**  add doc for global locale ([57530799](https://github.com/fetrarij/ngx-daterangepicker-material/commit/57530799df836662232fcb2c9819db65b54e479e))
+
+##### Refactors
+
+* **code:**  refactoring ([92f01ecf](https://github.com/fetrarij/ngx-daterangepicker-material/commit/92f01ecfb8416f01a33f2ee76fa68adf1866d735))
+
+#### 1.2.7 (2018-12-14)
+
+##### New Features
+
+* **css:**  make easy for styling ([2e649c6a](https://github.com/fetrarij/ngx-daterangepicker-material/commit/2e649c6a875e856502c8f44744978b47ec4dd573))
+
+##### Bug Fixes
+
+* **onPush:**  popup doesn't close on first click when OnPush changeDetection ([7e2d27d6](https://github.com/fetrarij/ngx-daterangepicker-material/commit/7e2d27d64ac3bcefe84a6abd2f202a9d36714f1b))
+* **ie11-clickdate:**  Unable to select custom date range from calendar in IE1 ([0a07daba](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0a07dabaf2eb4ae1abd16e1513389d5d64a0a114))
+* **locale-format:**  Locale.format does not change date formats ([5c4f7545](https://github.com/fetrarij/ngx-daterangepicker-material/commit/5c4f75453ecafae393b96f61118adc8034c13edc))
+
+##### Code Style Changes
+
+* **move-css:**  move  .btn / .clear / .buttons / [hidden] under .md-drppicker ([76406c02](https://github.com/fetrarij/ngx-daterangepicker-material/commit/76406c02e885612f1a73a57ce1b99a8aa6b5a331))
+* **month-year-select:**  add cursor pointer ([916810fd](https://github.com/fetrarij/ngx-daterangepicker-material/commit/916810fd6ad2024c1c898198ef015259556b8fca))
+
 #### 1.2.6 (2018-11-29)
 
 ##### Chores
@@ -100,8 +145,8 @@
 ##### New Features
 
 * **attribut:**  add new attributs:
-    - `opens`:  ability to position calendar to left, right or center [#21](https://github.com/fetrarij/ngx-daterangepicker-material/pull/21) 
-    
+    - `opens`:  ability to position calendar to left, right or center [#21](https://github.com/fetrarij/ngx-daterangepicker-material/pull/21)
+
     - `drops`: ability to position calendar to up or down ([c8c64605](https://github.com/fetrarij/ngx-daterangepicker-material/commit/c8c64605ee7deae36c41c4c64166f9bec21c3195))
 
     - `firstMonthDayClass` & `lastMonthDayClass` & `emptyWeekRowClass` & `lastDayOfPreviousMonthClass` & `firstDayOfNextMonthClass` : for customising the dates classes (Thanks to: [@butterknight](http://https://github.com/butterknight) )
@@ -137,7 +182,7 @@
 
 ##### New Features
 
-* **ranges:** disabling a range if it's beyond minDate or maxDate 
+* **ranges:** disabling a range if it's beyond minDate or maxDate
 
 #### 1.1.2 (2018-06-22)
 

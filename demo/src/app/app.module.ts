@@ -43,7 +43,9 @@ import { TimepickerComponent } from './timepicker/timepicker.component';
     MatGridListModule,
     MatInputModule,
     MatSelectModule,
-    NgxDaterangepickerMd,
+    NgxDaterangepickerMd.forRoot({
+      applyLabel: 'Okay'
+    }),
     RouterModule.forRoot(AppRoutes),
   ],
   providers: [],

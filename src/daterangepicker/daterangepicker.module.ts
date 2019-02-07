@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import {  ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatIconModule} from '@angular/material';
 import { DaterangepickerComponent } from './daterangepicker.component';
 import { DaterangepickerDirective } from './daterangepicker.directive';
-
+import { LocaleConfig, LOCALE_CONFIG } from './daterangepicker.config';
+import { LocaleService } from './locale.service';
 
 @NgModule({
   declarations: [
@@ -27,4 +28,16 @@ import { DaterangepickerDirective } from './daterangepicker.directive';
     DaterangepickerComponent
   ]
 })
-export class NgxDaterangepickerMd { }
+export class NgxDaterangepickerMd {
+  constructor() {
+  }
+  static forRoot(config: LocaleConfig = {}): ModuleWithProviders {
+    return {
+      ngModule: NgxDaterangepickerMd,
+      providers: [
+        { provide: LOCALE_CONFIG, useValue: config},
+        { provide: LocaleService, useClass: LocaleService, deps: [LOCALE_CONFIG]}
+      ]
+    };
+  }
+}
