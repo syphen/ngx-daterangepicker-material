@@ -9,7 +9,7 @@
 
 This plugin is a rewrite to angular from [bootstrap daterangepicker](http://www.daterangepicker.com), so it doesn't depends on jquery nor bootstrap.
 
-This plugin have an independant theme which looks more close to material design, so the material design is just a style.
+This plugin, in this branch only, require the angular material design plugin to have to work.
 
 ![](screen.png)
 ![](screen_material.png)
@@ -20,7 +20,7 @@ demo:  https://fetrarij.github.io/ngx-daterangepicker-material/
 
  Install the plugin from npm:
  
- `npm install ngx-daterangepicker-material --save` .
+ `npm install ngx-daterangepicker-material@1.0.0-material --save` .
 
  import **NgxDaterangepickerMd** in your module:
 

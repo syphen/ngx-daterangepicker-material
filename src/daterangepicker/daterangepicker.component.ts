@@ -112,7 +112,7 @@ export class DaterangepickerComponent implements OnInit {
     @Input()
     showRangeLabelOnInput: boolean = false;
     @Input()
-    material: boolean = false;
+    material: boolean = true;
     chosenRange: string;
     rangesArray: Array<any> = [];
 
