@@ -161,8 +161,14 @@ export class DaterangepickerComponent implements OnInit {
         }
         this.locale.daysOfWeek = daysOfWeek;
         if (this.inline) {
-            this._old.start = this.startDate.clone();
-            this._old.end = this.endDate.clone();
+          if(this.startDate == undefined) {
+            this.startDate = moment();
+          }
+          if(this.endDate == undefined) {
+            this.endDate = moment();
+          }
+          this._old.start = this.startDate.clone();
+          this._old.end = this.endDate.clone();
         }
 
         if (this.startDate && this.timePicker) {
